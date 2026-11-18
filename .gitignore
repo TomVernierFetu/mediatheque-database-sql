@@ -1,0 +1,6 @@
+# Fichiers temporaires et dumps locaux
+*.bak
+*.dump
+.DS_Store
+.vscode/
+.dbeaver/
