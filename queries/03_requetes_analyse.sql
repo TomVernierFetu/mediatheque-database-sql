@@ -1,8 +1,4 @@
--- =============================================================================
 -- PROJET BASE DE DONNEES : MEDIATHEQUE MUNICIPALE
--- Script 03 : Requêtes d'analyse et d'extraction (Niveaux 1 à 6)
--- Auteur : Tom Vernier-Fétu
--- =============================================================================
 
 USE mediatheque;
 
@@ -104,9 +100,7 @@ FROM adherent a
 ORDER BY a.date_naissance ASC
 LIMIT 1;
  
--- =============================================================================
 -- NIVEAU 2 : AFFINER LA SELECTION (OPERATEURS ET VALEURS NULL)
--- =============================================================================
 
 -- EXERCICE 2.1 - Afficher la liste des villes des adhérents, sans doublon, par ordre alphabétique.
 SELECT DISTINCT a.ville
@@ -149,9 +143,7 @@ SELECT l.titre, (2026 - l.annee_parution) AS age_livre
 FROM livre l;
 
 
--- =============================================================================
 -- NIVEAU 3 : COMPTER ET REGROUPER (FONCTIONS D'AGREGAT)
--- =============================================================================
 
 -- EXERCICE 3.1 - Combien la médiathèque possède-t-elle de livres ?
 SELECT COUNT(*) AS nb_livres
@@ -194,9 +186,7 @@ FROM emprunt e
 GROUP BY YEAR(e.date_emprunt);
 
 
--- =============================================================================
 -- NIVEAU 4 : JOINTURES INTERNES SIMPLES (INNER JOIN)
--- =============================================================================
 
 -- EXERCICE 4.1 - Titre de chaque livre avec le libellé de sa catégorie.
 SELECT l.titre, c.libelle
@@ -269,9 +259,7 @@ GROUP BY c.libelle
 HAVING COUNT(l.id_livre) >= 4;
 
 
--- =============================================================================
 -- NIVEAU 5 : JOINTURES MULTI-TABLES (TRAVERSER L'ASSOCIATION)
--- =============================================================================
 
 -- EXERCICE 5.1 - Pour chaque emprunt : nom, prénom, titre et date d'emprunt.
 SELECT a.nom, a.prenom, l.titre, e.date_emprunt
@@ -346,9 +334,7 @@ INNER JOIN categorie c ON l.id_categorie = c.id_categorie
 WHERE c.libelle = 'Policier';
 
 
--- =============================================================================
 -- NIVEAU 6 : JOINTURES EXTERNES (LEFT JOIN / RIGHT JOIN)
--- =============================================================================
 
 -- EXERCICE 6.1 - Libellé de toutes les catégories avec le titre de leurs livres (LEFT JOIN).
 SELECT c.libelle, l.titre

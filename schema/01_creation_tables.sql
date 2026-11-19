@@ -1,8 +1,4 @@
--- =============================================================================
 -- PROJET BASE DE DONNEES : MEDIATHEQUE MUNICIPALE
--- Script 01 : Création de la base et structure des tables (DDL)
--- Auteur : Tom Vernier-Fétu
--- =============================================================================
 
 DROP DATABASE IF EXISTS mediatheque;
 CREATE DATABASE mediatheque CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;

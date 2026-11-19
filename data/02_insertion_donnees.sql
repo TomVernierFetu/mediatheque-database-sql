@@ -1,8 +1,4 @@
--- =============================================================================
 -- PROJET BASE DE DONNEES : MEDIATHEQUE MUNICIPALE
--- Script 02 : Insertion du jeu d'essais et données de test (DML)
--- Auteur : Tom Vernier-Fétu
--- =============================================================================
 USE mediatheque;
 
 -- --- Donnees de la table categorie ---
