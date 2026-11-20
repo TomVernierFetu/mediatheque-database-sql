@@ -2,7 +2,7 @@
 
 Projet de conception de base de données relationnelle et d'extraction de données pour la gestion d'une médiathèque municipale (gestion des livres, des catégories, des adhérents et du suivi des emprunts/retards).
 
-Projet réalisé dans le cadre de ma formation en développement et bases de données (BTS SIO).
+Projet de modélisation relationnelle et requêtes SQL d'analyse métier (MySQL / MariaDB).
 
 ---
 
